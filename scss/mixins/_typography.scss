@@ -1,0 +1,23 @@
+@use '../functions' as *;
+@use '../variables' as *;
+@use 'sass:map';
+
+//prettier-ignore
+$text-presets: (
+  'poppins-semibold-h1': ('font-family': "Poppins", 'font-weight': 600, 'font-size': rem-calc(36), 'line-height': 150%, 'letter-spacing': 0.25px),
+  'poppins-semibold-h1-mobile': ('font-family': "Poppins", 'font-weight': 600, 'font-size': rem-calc(24), 'line-height': 150%, 'letter-spacing': 0.25px),
+  'poppins-extralight-h1': ('font-family': "Poppins", 'font-weight': 200, 'font-size': rem-calc(36), 'line-height': 150%, 'letter-spacing': 0.25px),
+  'poppins-extralight-h1-mobile': ('font-family': "Poppins", 'font-weight': 200, 'font-size': rem-calc(24), 'line-height': 150%, 'letter-spacing': 0.25px),
+  'poppins-semibold-h2': ('font-family': "Poppins", 'font-weight': 600, 'font-size': rem-calc(20), 'line-height': 150%, 'letter-spacing': 0px),
+  'poppins-regular-h3': ('font-famiy': "Poppins", 'font-weight': 400, 'font-size': rem-calc(15), 'line-height': rem-calc(25), 'letter-spacing': 0.1px),
+  'poppins-regular-paragraph': ('font-family': "Poppins", 'font-weight': 400, 'font-size': rem-calc(13), 'line-height': rem-calc(23), 'letter-spacing': 0.09px)
+);
+
+@mixin typography($text-preset) {
+  $preset: map.get($text-presets, $text-preset);
+  font-family: map.get($preset, 'font-family');
+  font-weight: map.get($preset, 'font-weight');
+  font-size: map.get($preset, 'font-size');
+  line-height: map.get($preset, 'line-height');
+  letter-spacing: map.get($preset, 'letter-spacing');
+}

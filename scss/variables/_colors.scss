@@ -1,0 +1,22 @@
+//base colors
+$white: #ffffff;
+$black: #000000;
+
+//design system colors
+$colors: (
+  'base': (
+    'white': $white,
+    'black': $black,
+  ),
+  'primary': (
+    'red': #ea5454,
+    'cyan': #44d3d2,
+    'orange': #fcae4a,
+    'blue': #549ef2,
+  ),
+  'neutral': (
+    'very dark blue': #4d4f62,
+    'grayish blue': #a3a5ae,
+    'very light gray': #fafafa,
+  ),
+);
