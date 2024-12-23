@@ -38,7 +38,7 @@ body {
         text-align: center;
       }
 
-      .h3-regular {
+      .paragraph-heading-regular {
         @include typography('poppins-regular-h3');
         color: get-color('neutral', 'grayish blue');
         text-align: center;
